@@ -1,0 +1,17 @@
+name: calculate-cloud-cost
+description: Calculate monthly cloud cost from caller-supplied quantity, unit price, billing periods, and currency.
+version: 0.1.0
+input_schema:
+  type: object
+  properties:
+    quantity: {type: number, minimum: 0}
+    unit_price: {type: number, minimum: 0}
+    periods_per_month: {type: number, minimum: 0}
+    currency: {type: string}
+  required: [quantity, unit_price, periods_per_month, currency]
+output_schema:
+  type: object
+implementation:
+  type: script
+  path: ../core/cost_calculator.py
+  runtime: python3

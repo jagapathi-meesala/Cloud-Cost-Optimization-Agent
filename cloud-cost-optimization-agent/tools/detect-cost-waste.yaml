@@ -1,0 +1,16 @@
+name: detect-cost-waste
+description: Detect low-utilization cost signals using caller-supplied utilization and threshold data.
+version: 0.1.0
+input_schema:
+  type: object
+  properties:
+    utilization_percent: {type: number, minimum: 0}
+    low_utilization_threshold_percent: {type: number, minimum: 0}
+    monthly_cost: {type: number, minimum: 0}
+  required: [utilization_percent, low_utilization_threshold_percent, monthly_cost]
+output_schema:
+  type: object
+implementation:
+  type: script
+  path: ../core/waste_detector.py
+  runtime: python3

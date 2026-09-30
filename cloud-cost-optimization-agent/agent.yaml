@@ -1,0 +1,15 @@
+spec_version: "0.1.0"
+name: cloud-cost-optimization-agent
+version: 0.1.0
+description: An agent that analyzes cloud usage and pricing inputs to identify cost drivers, waste signals, and deterministic optimization opportunities.
+skills:
+  - cost-analysis
+  - optimization-planning
+tools:
+  - calculate-cloud-cost
+  - detect-cost-waste
+  - recommend-rightsizing
+tags:
+  - cloud
+  - cost-optimization
+  - FinOps
